@@ -53,15 +53,9 @@ var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><
 	}
 
 function obtenerProductos() {
-	  fetch('https://retoolapi.dev/Wf9iSN/productos')
-            .then(res=>res.json())
-            .then(data=>{
-				productos=data;
-				productos.forEach(
-					function(producto) {
-					producto.price=parsefloat(producto.price)
-				});
-				listarProductos(data)})
+	  fetch('https://retoolapi.dev/PNoPTb/productos')
+           .then(res=>res.json())
+           .then(data=>{productos=data;listarProductos(data)})
 }
 
 function ordenarDesc(p_array_json, p_key) {
